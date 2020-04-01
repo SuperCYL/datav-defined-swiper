@@ -46,15 +46,20 @@ module.exports = Event.extend(function Base(container, config) {
     var html = `<div id="certify" style="height:427px;overflow:hidden"><div class="swiper-container" style="height:427px;"><div class="swiper-wrapper" style="height:427px;">`
     
     for (i = 0; i < data.length; i++) { 
-      html += ` <div class="swiper-slide">`
+      html += `<div class="swiper-slide swiper-slide-defined" id="${data[i]['id']}">`
       html += `<img src=${data[i]['image']} style='width:158px;height:102px;' />`
-      html += ` <p class="tittle" style="position:absolute;left:186px;top:6px;">${data[i]['value']}</p>`
+      html += `<p class="tittle" style="position:absolute;left:186px;top:6px;">${data[i]['value']}</p>`
       html += `<span style="position:absolute;left:186px;bottom:6px;">2019/2/2</span>`
       html += `<span style="position:absolute;right:14px;bottom:6px;">35345</span>`
-      html += ` </div>`
+      html += `</div>`
     }
    html += `</div></div></div>`
    this.container.html(html);
+
+   $(".swiper-slide-defined").on('click', (obj) => {
+     console.log($(obj)[0]["target"]["id"]);
+     this.emit('itemClick', data)            // data必须为一个对象，而不是一个简单值，属性名即为变量名。
+   })
 
     this.container.find(".swiper-slide").css({
       width:"583px",
@@ -102,7 +107,7 @@ module.exports = Event.extend(function Base(container, config) {
   })
 
   
-
+  
 
    
     //更新图表

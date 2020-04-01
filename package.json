@@ -51,7 +51,7 @@
       }
     },
     "events": {                              
-      "click": {                       
+      "itemClick": {                       
         "description": "点击事件",          
         "fields": {                         
           "value": {                      
@@ -64,22 +64,27 @@
     "api_data": {
       "source": [
         {
+          "id":1,
           "value": "标题1",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         },
         {
+          "id":2,
           "value": "标题2",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         },
         {
+          "id":3,
           "value": "标题3",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         },
         {
+          "id":4,
           "value": "标题4",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         },
         {
+          "id":5,
           "value": "标题5",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         }
