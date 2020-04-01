@@ -1,5 +1,5 @@
 {
-  "name": "@huakun-lunbo/lunbo",
+  "name": "@huakun-lunbo/definedlunbo",
   "version": "0.0.1",
   "dependencies": {
     "bcore": "0.0.18",
@@ -61,7 +61,15 @@
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         },
         {
-          "value": "标题2",
+          "value": "标题3",
+          "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
+        },
+        {
+          "value": "标题4",
+          "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
+        },
+        {
+          "value": "标题5",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         }
       ]

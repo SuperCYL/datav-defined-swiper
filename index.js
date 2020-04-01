@@ -48,7 +48,7 @@ module.exports = Event.extend(function Base(container, config) {
     for (i = 0; i < data.length; i++) { 
       html += ` <div class="swiper-slide">`
       html += `<img src=${data[i]['image']} style='width:158px;height:102px;' />`
-      html += ` <p style="position:absolute;left:186px;top:6px;">${data[i]['value']}</p>`
+      html += ` <p class="tittle" style="position:absolute;left:186px;top:6px;">${data[i]['value']}</p>`
       html += `<span style="position:absolute;left:186px;bottom:6px;">2019/2/2</span>`
       html += `<span style="position:absolute;right:14px;bottom:6px;">35345</span>`
       html += ` </div>`
@@ -66,8 +66,8 @@ module.exports = Event.extend(function Base(container, config) {
       padding:"14px"
     })
 
-
-   new Swiper('#certify .swiper-container', {
+    let that = this;
+   var mySwiper = new Swiper('#certify .swiper-container', {
     watchSlidesProgress: true,
     slidesPerView: 'auto',
     centeredSlides: true,
@@ -92,12 +92,17 @@ module.exports = Event.extend(function Base(container, config) {
           scale = 1 - Math.abs(slideProgress) / 4;
           slide.transform('scale(' + scale + ')');
         }
-      }
-    }
+      },
+      slideChangeTransitionStart: function(){
+        console.log(that.container.find(".swiper-slide-duplicate-active").find(".tittle").text());
+        // this.container.find(".swiper-slide-duplicate-active")
+      },
+    },
+    
 
   })
 
-
+  
 
 
    
