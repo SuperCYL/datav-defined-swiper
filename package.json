@@ -15,8 +15,8 @@
       "regular"
     ],
     "view": {
-      "width": "600",
-      "height": "400",
+      "width": "583",
+      "height": "427",
       "minWidth": "200",
       "minHeight": "100"
     },
@@ -54,6 +54,10 @@
       "source": [
         {
           "value": "标题1",
+          "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
+        },
+        {
+          "value": "标题2",
           "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
         },
         {

@@ -43,54 +43,64 @@ module.exports = Event.extend(function Base(container, config) {
     var cfg = this.mergeConfig(config);
 
 
-    var html = `<div id="certify"><div class="swiper-container"><div class="swiper-wrapper">`
+    var html = `<div id="certify" style="height:427px;overflow:hidden"><div class="swiper-container" style="height:427px;"><div class="swiper-wrapper" style="height:427px;">`
     
     for (i = 0; i < data.length; i++) { 
-      html += ` <div class="swiper-slide"><img src=${data[i]['image']} style='width:200px;height:200px;' />`
-      html += ` <p>${data[i]['value']}</p>`
+      html += ` <div class="swiper-slide">`
+      html += `<img src=${data[i]['image']} style='width:158px;height:102px;' />`
+      html += ` <p style="position:absolute;left:186px;top:6px;">${data[i]['value']}</p>`
+      html += `<span style="position:absolute;left:186px;bottom:6px;">2019/2/2</span>`
+      html += `<span style="position:absolute;right:14px;bottom:6px;">35345</span>`
       html += ` </div>`
     }
    html += `</div></div></div>`
    this.container.html(html);
 
-  //  new Swiper('#certify .swiper-container', {
-  //   watchSlidesProgress: true,
-  //   slidesPerView: 'auto',
-  //   centeredSlides: true,
-  //   direction: 'vertical',
-  //   loop: true, 
-  //   autoplay: true,
-  //   loopedSlides: 5,
-  //   autoplay: true,
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     //clickable :true,
-  //   },
-  //   on: {
-  //     progress: function (progress) {
-  //       for (i = 0; i < this.slides.length; i++) {
-  //         var slide = this.slides.eq(i);
-  //         var slideProgress = this.slides[i].progress;
-  //         scale = 1 - Math.abs(slideProgress) / 4;
-  //         slide.transform('scale(' + scale + ')');
-  //       }
-  //     }
-  //   }
-
-  // })
+    this.container.find(".swiper-slide").css({
+      width:"583px",
+      height:"127px",
+      background:"rgba(38,186,241,0.55)",
+      border:"1px solid rgba(38,186,241,1)",
+      marginBottom:"29px",
+      position:"relative",
+      padding:"14px"
+    })
 
 
+   new Swiper('#certify .swiper-container', {
+    watchSlidesProgress: true,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    direction: 'vertical',
+    loop: true, 
+    autoplay: true,
+    loopedSlides: 5,
+    autoplay: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      //clickable :true,
+    },
+    on: {
+      progress: function (progress) {
+        for (i = 0; i < this.slides.length; i++) {
+          var slide = this.slides.eq(i);
+          var slideProgress = this.slides[i].progress;
+          scale = 1 - Math.abs(slideProgress) / 4;
+          slide.transform('scale(' + scale + ')');
+        }
+      }
+    }
+
+  })
 
 
-    // this.container.find("#errBox").css({
-    //   width:"100px",
-    //   height:"100px",
-    //   "background-image": `url(${this.config.image})`
-    // })
+
+
+   
     //更新图表
     //this.chart.render(data, cfg);
     
