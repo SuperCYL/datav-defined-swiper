@@ -9,3 +9,7 @@ by caoyanlingdatav
 npm install
 
 datav run
+
+发布
+
+datav publish
