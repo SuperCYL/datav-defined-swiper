@@ -1,0 +1,66 @@
+{
+  "name": "@huakun-lunbo/lunbo",
+  "version": "0.0.1",
+  "dependencies": {
+    "bcore": "0.0.18",
+    "jquery": "2.1.4",
+    "lodash": "4.6.1",
+    "swiper": "^5.3.6"
+  },
+  "datav": {
+    "cn_name": "lunboTit",
+    "icon": "",
+    "protocol": 2,
+    "type": [
+      "regular"
+    ],
+    "view": {
+      "width": "600",
+      "height": "400",
+      "minWidth": "200",
+      "minHeight": "100"
+    },
+    "apis": {
+      "source": {
+        "handler": "render",
+        "description": "接口描述",
+        "fields": {
+          "value": {
+            "description": "值说明"
+          },
+          "image": {
+            "description": "图片说明"
+          }
+        }
+      }
+    },
+    "config": {
+      "size": {
+        "name": "字号",
+        "type": "number",
+        "default": 22,
+        "range": [
+          10,
+          100
+        ]
+      },
+      "color": {
+        "name": "正文字体颜色",
+        "type": "color",
+        "default": "#fff"
+      }
+    },
+    "api_data": {
+      "source": [
+        {
+          "value": "标题1",
+          "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
+        },
+        {
+          "value": "标题2",
+          "image": "http://a0.att.hudong.com/78/52/01200000123847134434529793168.jpg"
+        }
+      ]
+    }
+  }
+}
