@@ -1,6 +1,6 @@
 {
-  "name": "@huakun-lunbo/definedlunbo",
-  "version": "0.0.1",
+  "name": "@huakun-lunbo/lunbo",
+  "version": "0.0.3",
   "dependencies": {
     "bcore": "0.0.18",
     "jquery": "2.1.4",
@@ -48,6 +48,17 @@
         "name": "正文字体颜色",
         "type": "color",
         "default": "#fff"
+      }
+    },
+    "events": {                              
+      "click": {                       
+        "description": "点击事件",          
+        "fields": {                         
+          "value": {                      
+            "value": "标题",
+            "image":"图片链接"
+          }
+        }
       }
     },
     "api_data": {
