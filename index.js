@@ -67,7 +67,7 @@ module.exports = Event.extend(function Base(container, config) {
     })
 
     let that = this;
-   var mySwiper = new Swiper('#certify .swiper-container', {
+    new Swiper('#certify .swiper-container', {
     watchSlidesProgress: true,
     slidesPerView: 'auto',
     centeredSlides: true,
@@ -95,7 +95,6 @@ module.exports = Event.extend(function Base(container, config) {
       },
       slideChangeTransitionStart: function(){
         console.log(that.container.find(".swiper-slide-duplicate-active").find(".tittle").text());
-        // this.container.find(".swiper-slide-duplicate-active")
       },
     },
     
