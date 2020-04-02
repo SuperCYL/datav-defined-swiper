@@ -57,8 +57,11 @@ module.exports = Event.extend(function Base(container, config) {
    this.container.html(html);
 
    $(".swiper-slide-defined").on('click', (obj) => {
-     console.log($(obj)[0]["target"]["id"]);
-     this.emit('itemClick', data)            // data必须为一个对象，而不是一个简单值，属性名即为变量名。
+     var params = {
+      id:$(obj)[0]["target"]["id"]
+     }
+     console.log(params);
+     this.emit('itemClick', params)            // data必须为一个对象，而不是一个简单值，属性名即为变量名。
    })
 
     this.container.find(".swiper-slide").css({

@@ -1,6 +1,6 @@
 {
   "name": "@huakun-lunbo/lunbo",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "dependencies": {
     "bcore": "0.0.18",
     "jquery": "2.1.4",
@@ -8,7 +8,7 @@
     "swiper": "^5.3.6"
   },
   "datav": {
-    "cn_name": "lunboTit",
+    "cn_name": "lunbo",
     "icon": "",
     "protocol": 2,
     "type": [
@@ -54,7 +54,8 @@
       "itemClick": {                       
         "description": "点击事件",          
         "fields": {                         
-          "value": {                      
+          "value": {   
+            "id":"唯一标示",                   
             "value": "标题",
             "image":"图片链接"
           }
