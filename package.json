@@ -5,7 +5,7 @@
     "bcore": "0.0.18",
     "jquery": "2.1.4",
     "lodash": "4.6.1",
-    "swiper": "^5.3.6"
+    "swiper": "^6.5.1"
   },
   "datav": {
     "cn_name": "lunbo",
